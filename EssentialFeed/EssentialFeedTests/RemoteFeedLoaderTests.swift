@@ -11,7 +11,7 @@ class RemoteFeedLoader {
     let client: HTTPClient
     let url: URL
     
-    init(url: URL,client: HTTPClient) {
+    init(url: URL, client: HTTPClient) {
         self.url = url
         self.client = client
     }
@@ -49,6 +49,8 @@ class RemoteFeedLoaderTests: XCTestCase {
         
         XCTAssertEqual(client.requestedURL, url)
     }
+    
+    // MARK: - Helpers
     
     private func makeSUT(url: URL = URL(string: "https://a-url.com")!) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
