@@ -99,17 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				080EDF0B21B6DAE800813479 /* FeedItem.swift */,
-				D60FC90E2DCC858100F27311 /* Feed API */,
-			);
-			path = "Feed Feature";
-			sourceTree = "<group>";
-		};
-		D60FC90E2DCC858100F27311 /* Feed API */ = {
-			isa = PBXGroup;
-			children = (
 				080EDF0D21B6DCB600813479 /* FeedLoader.swift */,
 			);
-			path = "Feed API";
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
 		D60FC90F2DCC858D00F27311 /* Feed API */ = {
