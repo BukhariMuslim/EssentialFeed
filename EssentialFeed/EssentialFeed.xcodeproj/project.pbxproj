@@ -20,6 +20,7 @@
 		D60FC9222DCDEDAD00F27311 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080EDEF121B6DA7E00813479 /* EssentialFeed.framework */; };
 		D60FC9282DCDF23600F27311 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FC9162DCDDFD300F27311 /* XCTestCase+MemoryLeakTracking.swift */; };
 		D67E14092DD1908F004A60D6 /* CacheFeedUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E14082DD1908F004A60D6 /* CacheFeedUseCaseTest.swift */; };
+		D67E14102DD44075004A60D6 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E140F2DD44075004A60D6 /* LocalFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		D60FC91E2DCDEDAD00F27311 /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60FC9292DCDF2E100F27311 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
 		D67E14082DD1908F004A60D6 /* CacheFeedUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTest.swift; sourceTree = "<group>"; };
+		D67E140F2DD44075004A60D6 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -180,6 +182,7 @@
 		D67E140A2DD19163004A60D6 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
+				D67E140F2DD44075004A60D6 /* LocalFeedLoader.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				D60FC90D2DCC7F9700F27311 /* FeedItemsMapper.swift in Sources */,
 				080EDF0E21B6DCB600813479 /* FeedLoader.swift in Sources */,
 				D60FC9062DCC57EB00F27311 /* RemoteFeedLoader.swift in Sources */,
+				D67E14102DD44075004A60D6 /* LocalFeedLoader.swift in Sources */,
 				D60FC9092DCC7F5200F27311 /* HTTPClient.swift in Sources */,
 				080EDF0C21B6DAE800813479 /* FeedItem.swift in Sources */,
 				D60FC9192DCDEAF500F27311 /* URLSessionHTTPClient.swift in Sources */,
