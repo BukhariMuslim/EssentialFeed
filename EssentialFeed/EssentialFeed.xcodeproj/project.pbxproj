@@ -242,14 +242,30 @@
 		D67E140A2DD19163004A60D6 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
+				D693965A2DD74A8900B4A76E /* Infrastructure */,
 				D61CB66D2DD4709F001B482E /* FeedCachePolicy.swift */,
 				D67E14112DD44101004A60D6 /* FeedStore.swift */,
 				D67E14172DD44C18004A60D6 /* LocalFeedImage.swift */,
 				D67E140F2DD44075004A60D6 /* LocalFeedLoader.swift */,
+			);
+			path = "Feed Cache";
+			sourceTree = "<group>";
+		};
+		D693965A2DD74A8900B4A76E /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				D693965C2DD74AA400B4A76E /* CoreData */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		D693965C2DD74AA400B4A76E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
 				D61CB6802DD7340B001B482E /* CoreDataFeedStore.swift */,
 				D61CB6862DD736EB001B482E /* FeedStore.xcdatamodeld */,
 			);
-			path = "Feed Cache";
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D6C69F412DD4519400A96B13 /* Helpers */ = {
