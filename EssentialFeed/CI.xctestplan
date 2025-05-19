@@ -17,9 +17,17 @@
           "name" : "EssentialFeed"
         }
       ]
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:EssentialFeed.xcodeproj",
+        "identifier" : "080EDEF921B6DA7E00813479",
+        "name" : "EssentialFeedTests"
+      }
+    },
     {
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
@@ -30,8 +38,8 @@
     {
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
-        "identifier" : "080EDEF921B6DA7E00813479",
-        "name" : "EssentialFeedTests"
+        "identifier" : "D64CB46D2DD756D300BE47F5",
+        "name" : "EssentialFeedCacheIntegrationTests"
       }
     }
   ],
