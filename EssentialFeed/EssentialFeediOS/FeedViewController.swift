@@ -73,7 +73,7 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
         cell.descriptionLabel.text = cellModel.description
         cell.feedImageView.image = nil
         cell.feedImageRetryButton.isHidden = true
-        cell.feedImageContainer.startShimmering()
+        cell.feedImageContainer.isShimmering = true
         
         let loadImage = { [weak self, weak cell] in
             guard let self = self else { return }
@@ -83,7 +83,7 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
                 let image = data.map(UIImage.init) ?? nil
                 cell?.feedImageView.image = image
                 cell?.feedImageRetryButton.isHidden = (image != nil)
-                cell?.feedImageContainer.stopShimmering()
+                cell?.feedImageContainer.isShimmering = false
             }
         }
         
