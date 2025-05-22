@@ -5,7 +5,6 @@
 //  Created by Bukhari Muslim on 22/05/25.
 //
 
-import Foundation
 import EssentialFeed
 
 final class FeedViewModel {
