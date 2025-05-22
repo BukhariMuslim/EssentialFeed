@@ -58,7 +58,7 @@ extension FeedViewController {
         return 0
     }
     
-    func simulateAppearing() {
+    func simulateAppearance() {
         if !isViewLoaded  {
             loadViewIfNeeded()
             replaceRefreshControlWithFakeForiOS17Support()
