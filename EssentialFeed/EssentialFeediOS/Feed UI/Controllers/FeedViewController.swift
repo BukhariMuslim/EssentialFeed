@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import EssentialFeed
 
 public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching {
     public var refreshController: FeedRefreshViewController?
@@ -27,8 +26,8 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
         tableView.prefetchDataSource = self
         
         onViewIsAppearing = { vc in
-            vc.refreshController?.refresh()
             vc.onViewIsAppearing = nil
+            vc.refreshController?.refresh()
         }
     }
     
