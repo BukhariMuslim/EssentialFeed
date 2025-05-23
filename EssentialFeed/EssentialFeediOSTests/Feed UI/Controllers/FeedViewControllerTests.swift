@@ -239,7 +239,7 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(loader.cancelledImageURls, [image0.url, image1.url], "Expected second cancelled image URL request once second image is not near visible")
     }
     
-    func test_feedImageVive_doesNotShowDataFromPreviousRequestWhenCellIsReused() throws {
+    func test_feedImageView_doesNotShowDataFromPreviousRequestWhenCellIsReused() throws {
         let (sut, loader) = try makeSUT()
         
         sut.simulateAppearance()
@@ -252,6 +252,23 @@ final class FeedViewControllerTests: XCTestCase {
         loader.completeImageLoading(with: imageData0, at: 0)
         
         XCTAssertEqual(view0.renderedImage, .none, "Expected no image state change for reused view once image loading completes successfully")
+    }
+    
+    func test_feedImageView_showsDataForNewViewRequestAfterPreviousViewIsReused() throws {
+        let (sut, loader) = try makeSUT()
+        
+        sut.simulateAppearance()
+        loader.completeFeedLoading(with: [makeImage(), makeImage()])
+        
+        let previousView = try XCTUnwrap(sut.simulateFeedImageViewNotVisible(at: 0))
+        
+        let newView = try XCTUnwrap(sut.simulateFeedImageViewVisible(at: 0))
+        previousView.prepareForReuse()
+        
+        let imageData = anyImageData()
+        loader.completeImageLoading(with: imageData, at: 1)
+        
+        XCTAssertEqual(newView.renderedImage, imageData)
     }
     
     func test_feedImageView_doesNotRenderLoadedImageWhenNotVisibleAnymore() throws {
