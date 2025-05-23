@@ -134,6 +134,7 @@ Location</string>
                         <connections>
                             <outlet property="dataSource" destination="mBZ-Hw-Szg" id="4xU-92-vmI"/>
                             <outlet property="delegate" destination="mBZ-Hw-Szg" id="WSN-mj-UR6"/>
+                            <outlet property="prefetchDataSource" destination="mBZ-Hw-Szg" id="19P-Pu-FGd"/>
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Kko-IT-8iA">
