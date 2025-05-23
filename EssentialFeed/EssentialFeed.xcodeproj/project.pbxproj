@@ -441,7 +441,6 @@
 			isa = PBXGroup;
 			children = (
 				D6490FA22DE0B9E200738B9B /* Feed Presentation */,
-				D6C1FF652DDE4DEA0054EB43 /* Helpers */,
 				D6C1FF632DDE4DD10054EB43 /* Feed UI */,
 			);
 			path = EssentialFeediOSTests;
@@ -512,25 +511,18 @@
 			path = "Feed UI";
 			sourceTree = "<group>";
 		};
-		D6C1FF652DDE4DEA0054EB43 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D6C1FF6A2DDE544F0054EB43 /* UIImage+TestHelpers.swift */,
-				D6C1FF6C2DDE54B60054EB43 /* UIRefreshControl+TestHelpers.swift */,
-				D6C1FF6E2DDE55180054EB43 /* UIButton+TestHelpers.swift */,
-				D6C1FF702DDE555D0054EB43 /* UIControl+TestHelpers.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		D6C1FF662DDE4DF10054EB43 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D6C1FF722DDE56070054EB43 /* FeedViewController+TestHelpers.swift */,
 				D6C1FF742DDE56A20054EB43 /* FeedImageCell+TestHelpers.swift */,
-				D6C1FF762DDE56FE0054EB43 /* FeedViewControllerTests+LoaderSpy.swift */,
+				D6C1FF722DDE56070054EB43 /* FeedViewController+TestHelpers.swift */,
 				D6C1FF782DDE57750054EB43 /* FeedViewControllerTests+Assertions.swift */,
+				D6C1FF762DDE56FE0054EB43 /* FeedViewControllerTests+LoaderSpy.swift */,
 				D6490FA02DE0B84500738B9B /* FeedViewControllerTests+Localization.swift */,
+				D6C1FF6E2DDE55180054EB43 /* UIButton+TestHelpers.swift */,
+				D6C1FF702DDE555D0054EB43 /* UIControl+TestHelpers.swift */,
+				D6C1FF6A2DDE544F0054EB43 /* UIImage+TestHelpers.swift */,
+				D6C1FF6C2DDE54B60054EB43 /* UIRefreshControl+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
