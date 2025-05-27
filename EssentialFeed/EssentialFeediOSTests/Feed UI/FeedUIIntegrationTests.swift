@@ -82,7 +82,7 @@ final class FeedUIIntegrationTests: XCTestCase {
         assertThat(sut, isRendering: [image0])
     }
     
-    func test_loadFeedCompletion_rendersErrorMessageOnError() throws {
+    func test_loadFeedCompletion_rendersErrorMessageOnErrorUntilNextReload() throws {
         let (sut, loader) = try makeSUT()
         
         sut.simulateAppearance()
@@ -91,6 +91,9 @@ final class FeedUIIntegrationTests: XCTestCase {
         
         loader.completeFeedLoadingWithError(at: 0)
         XCTAssertEqual(sut.errorMessage, localized("FEED_VIEW_CONNECTION_ERROR"))
+        
+        sut.simulateUserInitiatedReload()
+        XCTAssertEqual(sut.errorMessage, nil)
     }
     
     func test_feedImageView_loadsImageURLWhenVisible() throws {
