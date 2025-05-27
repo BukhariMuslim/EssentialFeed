@@ -439,6 +439,16 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		D6AB308B2DE56FB00093C428 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D6490F9C2DE0AE2A00738B9B /* UIImageView+Animations.swift */,
+				D6490F9A2DE0AD1F00738B9B /* UITableView+Dequeueing.swift */,
+				D6C1FF4F2DDE4D3C0054EB43 /* UIView+Shimmering.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D6C1FF502DDE4D3C0054EB43 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,12 +514,10 @@
 		D6C1FF622DDE4D950054EB43 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D6AB308B2DE56FB00093C428 /* Helpers */,
 				D6490F822DE012EB00738B9B /* Feed.storyboard */,
 				D6AB30892DE5697C0093C428 /* ErrorView.swift */,
 				D6C1FF4D2DDE4D3C0054EB43 /* FeedImageCell.swift */,
-				D6490F9C2DE0AE2A00738B9B /* UIImageView+Animations.swift */,
-				D6490F9A2DE0AD1F00738B9B /* UITableView+Dequeueing.swift */,
-				D6C1FF4F2DDE4D3C0054EB43 /* UIView+Shimmering.swift */,
 				D6490F982DE0135A00738B9B /* Feed.xcassets */,
 			);
 			path = Views;
