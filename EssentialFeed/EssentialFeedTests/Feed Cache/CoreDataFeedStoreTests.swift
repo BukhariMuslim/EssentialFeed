@@ -81,7 +81,7 @@ class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
         assertThatSideEffectsRunSerially(on: sut)
     }
     
-    // - MARK: Helpers
+    // MARK: - Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) throws -> FeedStore {
         let storeBundle = Bundle(for: CoreDataFeedStore.self)

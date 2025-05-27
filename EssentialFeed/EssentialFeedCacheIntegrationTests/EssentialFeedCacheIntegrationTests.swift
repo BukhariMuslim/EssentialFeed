@@ -51,7 +51,7 @@ class EssentialFeedCacheIntegrationTests: XCTestCase {
         expect(sutToPerformLoad, toLoad: latestFeed)
     }
     
-    // - MARK: Helpers
+    // MARK: - Helpers
     
     private func makeSUT(file: StaticString = #filePath, line: UInt = #line) throws -> LocalFeedLoader {
         let storeBundle = Bundle(for: CoreDataFeedStore.self)
