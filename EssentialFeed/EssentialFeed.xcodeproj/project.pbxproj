@@ -456,11 +456,11 @@
 			isa = PBXGroup;
 			children = (
 				D61CB6802DD7340B001B482E /* CoreDataFeedStore.swift */,
+				D6F32B0B2DE6DFD400B07961 /* CoreDataFeedStore+FeedImageDataLoader.swift */,
 				D693965E2DD74B6E00B4A76E /* CoreDataHelpers.swift */,
 				D69396602DD74C1D00B4A76E /* ManageCache.swift */,
 				D69396622DD74C5400B4A76E /* ManagedFeedImage.swift */,
 				D61CB6862DD736EB001B482E /* FeedStore.xcdatamodeld */,
-				D6F32B0B2DE6DFD400B07961 /* CoreDataFeedStore+FeedImageDataLoader.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1572,7 +1572,7 @@
 				D6F32B0A2DE6DE7D00B07961 /* FeedStore 2.xcdatamodel */,
 				D61CB6872DD736EB001B482E /* FeedStore.xcdatamodel */,
 			);
-			currentVersion = D61CB6872DD736EB001B482E /* FeedStore.xcdatamodel */;
+			currentVersion = D6F32B0A2DE6DE7D00B07961 /* FeedStore 2.xcdatamodel */;
 			path = FeedStore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
