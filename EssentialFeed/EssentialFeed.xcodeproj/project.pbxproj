@@ -186,7 +186,7 @@
 		D61CB6872DD736EB001B482E /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
 		D637258B2DDCD09500EC3FE5 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63725932DDCD09500EC3FE5 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D63725A02DDCD26A00EC3FE5 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = "<group>"; };
+		D648171E2DE7494600D7AED7 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = SOURCE_ROOT; };
 		D6490F822DE012EB00738B9B /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		D6490F982DE0135A00738B9B /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		D6490F9A2DE0AD1F00738B9B /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
@@ -309,15 +309,15 @@
 		080EDEE721B6DA7E00813479 = {
 			isa = PBXGroup;
 			children = (
-				D6F76F952DDCDAC700D05348 /* EssentialFeediOS.xctestplan */,
+				D648171E2DE7494600D7AED7 /* CI_iOS.xctestplan */,
 				D60FC9292DCDF2E100F27311 /* CI_macOS.xctestplan */,
-				D63725A02DDCD26A00EC3FE5 /* CI_iOS.xctestplan */,
+				D6F76F952DDCDAC700D05348 /* EssentialFeediOS.xctestplan */,
 				080EDEF321B6DA7E00813479 /* EssentialFeed */,
 				D6C1FF582DDE4D420054EB43 /* EssentialFeedAPIEndToEndTests */,
 				D6C1FF5B2DDE4D450054EB43 /* EssentialFeedCacheIntegrationTests */,
-				080EDEFE21B6DA7E00813479 /* EssentialFeedTests */,
 				D6C1FF502DDE4D3C0054EB43 /* EssentialFeediOS */,
 				D6C1FF552DDE4D3F0054EB43 /* EssentialFeediOSTests */,
+				080EDEFE21B6DA7E00813479 /* EssentialFeedTests */,
 				D6F76F9D2DDE35E100D05348 /* Frameworks */,
 				080EDEF221B6DA7E00813479 /* Products */,
 			);
