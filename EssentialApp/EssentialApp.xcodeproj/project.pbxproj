@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D60C5A5E2DE7233D0031E4EC /* EssentialApp.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = D60C5A5D2DE7233D0031E4EC /* EssentialApp.xctestplan */; };
 		D622E9142DE7202A00957BA7 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D622E9122DE7202A00957BA7 /* EssentialFeed.framework */; };
 		D622E9152DE7202A00957BA7 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D622E9122DE7202A00957BA7 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D622E9162DE7202A00957BA7 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D622E9132DE7202A00957BA7 /* EssentialFeediOS.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D60C5A5D2DE7233D0031E4EC /* EssentialApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialApp.xctestplan; sourceTree = "<group>"; };
 		D622E9122DE7202A00957BA7 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D622E9132DE7202A00957BA7 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69E91142DE71E730040B911 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 		D69E910B2DE71E730040B911 = {
 			isa = PBXGroup;
 			children = (
+				D60C5A5D2DE7233D0031E4EC /* EssentialApp.xctestplan */,
 				D69E91162DE71E730040B911 /* EssentialApp */,
 				D69E912D2DE71E740040B911 /* EssentialAppTests */,
 				D69E91372DE71E740040B911 /* EssentialAppUITests */,
@@ -228,6 +231,7 @@
 					};
 					D69E91292DE71E740040B911 = {
 						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
 						TestTargetID = D69E91132DE71E730040B911;
 					};
 					D69E91332DE71E740040B911 = {
@@ -262,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60C5A5E2DE7233D0031E4EC /* EssentialApp.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = THNCCMD76S;
@@ -507,6 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmapp.EssentialAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EssentialApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EssentialApp";
@@ -517,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = THNCCMD76S;
