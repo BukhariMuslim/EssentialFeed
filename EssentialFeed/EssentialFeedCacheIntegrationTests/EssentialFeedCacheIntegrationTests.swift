@@ -22,33 +22,35 @@ class EssentialFeedCacheIntegrationTests: XCTestCase {
         undoStoreSideEffects()
     }
     
+    // MARK: - LocalFeedLoader Tests
+    
     func test_load_deliversNoItemsOnEmptyCache() throws {
-        let sut = try makeFeedLoader()
+        let feedLoader = try makeFeedLoader()
         
-        expect(sut, toLoad: [])
+        expect(feedLoader, toLoad: [])
     }
     
-    func test_load_deliversItemsSavedOnASeparateInstance() throws {
-        let sutToPerformSave = try makeFeedLoader()
-        let sutToPerformLoad = try makeFeedLoader()
+    func test_loadFeed_deliversItemsSavedOnASeparateInstance() throws {
+        let feedLoaderToPerformSave = try makeFeedLoader()
+        let feedLoaderToPerformLoad = try makeFeedLoader()
         let feed = uniqueImageFeed().models
         
-        save(feed, with: sutToPerformSave)
+        save(feed, with: feedLoaderToPerformSave)
         
-        expect(sutToPerformLoad, toLoad: feed)
+        expect(feedLoaderToPerformLoad, toLoad: feed)
     }
     
-    func test_save_overrideItemsSavedOnASeparateInstance() throws {
-        let sutToPerformFirstSave = try makeFeedLoader()
-        let sutToPerformLastSave = try makeFeedLoader()
-        let sutToPerformLoad = try makeFeedLoader()
+    func test_saveFeed_overridesItemsSavedOnASeparateInstance() throws {
+        let feedLoaderToPerformFirstSave = try makeFeedLoader()
+        let feedLoaderToPerformLastSave = try makeFeedLoader()
+        let feedLoaderToPerformLoad = try makeFeedLoader()
         let firstFeed = uniqueImageFeed().models
         let latestFeed = uniqueImageFeed().models
         
-        save(firstFeed, with: sutToPerformFirstSave)
-        save(latestFeed, with: sutToPerformLastSave)
+        save(firstFeed, with: feedLoaderToPerformFirstSave)
+        save(latestFeed, with: feedLoaderToPerformLastSave)
         
-        expect(sutToPerformLoad, toLoad: latestFeed)
+        expect(feedLoaderToPerformLoad, toLoad: latestFeed)
     }
     
     // MARK: - LocalImageDataLoader Tests
