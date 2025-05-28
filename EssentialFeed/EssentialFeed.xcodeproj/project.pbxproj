@@ -421,13 +421,13 @@
 			children = (
 				D6F32B062DE6D59000B07961 /* CacheFeedImageDataUseCaseTests.swift */,
 				D67E14082DD1908F004A60D6 /* CacheFeedUseCaseTest.swift */,
+				D6F32B082DE6D9AF00B07961 /* CoreDataFeedImageDataStoreTests.swift */,
 				D61CB67E2DD7333E001B482E /* CoreDataFeedStoreTests.swift */,
 				D6C69F3F2DD450D800A96B13 /* LoadFeedFromCacheUseCaseTest.swift */,
 				D6F32AFC2DE6ACA400B07961 /* LoadFeedImageDataFromCacheUseCaseTests.swift */,
 				D6C69F442DD4612300A96B13 /* ValidateFeedCacheUseCaseTests.swift */,
 				D61CB67D2DD71F4A001B482E /* FeedStoreSpecs */,
 				D6C69F412DD4519400A96B13 /* Helpers */,
-				D6F32B082DE6D9AF00B07961 /* CoreDataFeedImageDataStoreTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
