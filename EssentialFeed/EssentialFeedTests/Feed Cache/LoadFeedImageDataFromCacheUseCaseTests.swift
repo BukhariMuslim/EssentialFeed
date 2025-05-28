@@ -1,0 +1,126 @@
+//
+//  LoadFeedImageDataFromCacheUseCaseTests.swift
+//  EssentialFeedTests
+//
+//  Created by Bukhari Muslim on 28/05/25.
+//
+
+import XCTest
+import EssentialFeed
+
+class LoadFeedImageDataFromCacheUseCaseTests: XCTestCase {
+    
+    func test_init_doesNotMessageStoreUponCreation() throws {
+        let (_, store) = try makeSUT()
+        
+        XCTAssertTrue(store.receivedMessages.isEmpty)
+    }
+    
+    func test_loadImageDataFromURL_requestsStoredDataForURL() throws {
+        let (sut, store) = try makeSUT()
+        let url = anyURL()
+        
+        _ = sut.loadImageData(from: url) { _ in }
+        
+        XCTAssertEqual(store.receivedMessages, [.retrieve(dataFor: url)])
+    }
+    
+    func test_loadImageDataFromURL_failsOnStoreError() throws {
+        let (sut, store) = try makeSUT()
+        
+        expect(sut, toCompleteWith: failed(), when: {
+            let retrievalError = anyNSError()
+            store.completeWithRetrieval(with: retrievalError)
+        })
+    }
+    
+    func test_loadImageDataFromURL_deliversNotFoundErrorOnNotFound() throws {
+        let (sut, store) = try makeSUT()
+        
+        expect(sut, toCompleteWith: notFound(), when: {
+            store.completeWithRetrieval(with: .none)
+        })
+    }
+    
+    func test_loadImageDataFromURL_deliversStoreDataOnFoundData() throws {
+        let (sut, store) = try makeSUT()
+        let foundData = anyData()
+        
+        expect(sut, toCompleteWith: .success(foundData), when: {
+            store.completeWithRetrieval(with: foundData)
+        })
+    }
+    
+    func test_loadImageDataFromURL_doesNotDeliverResultAfterCancellingTask() throws {
+        let (sut, store) = try makeSUT()
+        let foundData = anyData()
+        
+        var received = [FeedImageDataLoader.Result]()
+        let task = sut.loadImageData(from: anyURL()) { received.append($0) }
+        task.cancel()
+        
+        store.completeWithRetrieval(with: foundData)
+        store.completeWithRetrieval(with: .none)
+        store.completeWithRetrieval(with: anyNSError())
+        
+        XCTAssertTrue(received.isEmpty, "Expected no received results after cancelling task")
+    }
+    
+    func test_loadImageDataLoader_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() throws {
+        let store = FeedImageDataStoreSpy()
+        var sut: LocalFeedImageDataLoader? = LocalFeedImageDataLoader(store: store)
+        
+        var received = [FeedImageDataLoader.Result]()
+        _ = sut?.loadImageData(from: anyURL()) { received.append($0) }
+        
+        sut = nil
+        store.completeWithRetrieval(with: anyData())
+        
+        XCTAssertTrue(received.isEmpty, "Expected no received results after instance has been deallocated")
+    }
+    
+    // MARK: - Helpers
+    
+    private func makeSUT(currentData: @escaping () -> Date = Date.init, file: StaticString = #filePath, line: UInt = #line) throws -> (sut: LocalFeedImageDataLoader, store: FeedImageDataStoreSpy) {
+        let store = FeedImageDataStoreSpy()
+        let sut = LocalFeedImageDataLoader(store: store)
+        trackForMemoryLeaks(store, file: file, line: line)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return (sut, store)
+    }
+    
+    private func failed() -> FeedImageDataLoader.Result {
+        return .failure(LocalFeedImageDataLoader.LoadError.failed)
+    }
+    
+    private func notFound() -> FeedImageDataLoader.Result {
+        return .failure(LocalFeedImageDataLoader.LoadError.notFound)
+    }
+    
+    private func never(file: StaticString = #filePath, line: UInt = #line) {
+        XCTFail("Expected no no invocations", file: file, line: line)
+    }
+    
+    private func expect(_ sut: LocalFeedImageDataLoader, toCompleteWith expectedResult: FeedImageDataLoader.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+        let exp = expectation(description: "Wait for load completion")
+        
+        _ = sut.loadImageData(from: anyURL()) { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedData), .success(expectedData)):
+                XCTAssertEqual(receivedData, expectedData, file: file, line: line)
+                
+            case (.failure(let receivedError as LocalFeedImageDataLoader.LoadError), .failure(let expectedError as LocalFeedImageDataLoader.LoadError)):
+                    XCTAssertEqual(receivedError, expectedError, file: file, line: line)
+                
+            default:
+                XCTFail("Expected result \(expectedResult), got \(receivedResult) insted", file: file, line: line)
+            }
+            
+            exp.fulfill()
+        }
+        
+        action()
+        wait(for: [exp], timeout: 1.0)
+    }
+    
+}
