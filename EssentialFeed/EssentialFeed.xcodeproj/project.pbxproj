@@ -92,6 +92,8 @@
 		D6F32AF92DE630BF00B07961 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F32AF62DE6300E00B07961 /* HTTPURLResponse+StatusCode.swift */; };
 		D6F32AFB2DE6312C00B07961 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F32AFA2DE6312C00B07961 /* URLProtocolStub.swift */; };
 		D6F32AFD2DE6ACA400B07961 /* LocalFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F32AFC2DE6ACA400B07961 /* LocalFeedImageDataLoaderTests.swift */; };
+		D6F32AFF2DE6BA1800B07961 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F32AFE2DE6BA1800B07961 /* LocalFeedImageDataLoader.swift */; };
+		D6F32B012DE6BA8100B07961 /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F32B002DE6BA8100B07961 /* FeedImageDataStore.swift */; };
 		D6F76F962DDCDD5800D05348 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FC9162DCDDFD300F27311 /* XCTestCase+MemoryLeakTracking.swift */; };
 		D6F76F9E2DDE35E100D05348 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080EDEF121B6DA7E00813479 /* EssentialFeed.framework */; platformFilter = ios; };
 		D6F76F9F2DDE35E100D05348 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 080EDEF121B6DA7E00813479 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -236,6 +238,8 @@
 		D6F32AF62DE6300E00B07961 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		D6F32AFA2DE6312C00B07961 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		D6F32AFC2DE6ACA400B07961 /* LocalFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		D6F32AFE2DE6BA1800B07961 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
+		D6F32B002DE6BA8100B07961 /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
 		D6F76F952DDCDAC700D05348 /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -417,11 +421,13 @@
 		D67E140A2DD19163004A60D6 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
-				D693965A2DD74A8900B4A76E /* Infrastructure */,
 				D61CB66D2DD4709F001B482E /* FeedCachePolicy.swift */,
+				D6F32B002DE6BA8100B07961 /* FeedImageDataStore.swift */,
 				D67E14112DD44101004A60D6 /* FeedStore.swift */,
 				D67E14172DD44C18004A60D6 /* LocalFeedImage.swift */,
+				D6F32AFE2DE6BA1800B07961 /* LocalFeedImageDataLoader.swift */,
 				D67E140F2DD44075004A60D6 /* LocalFeedLoader.swift */,
+				D693965A2DD74A8900B4A76E /* Infrastructure */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -866,6 +872,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F32AFF2DE6BA1800B07961 /* LocalFeedImageDataLoader.swift in Sources */,
 				D693965F2DD74B6E00B4A76E /* CoreDataHelpers.swift in Sources */,
 				D60FC90D2DCC7F9700F27311 /* FeedItemsMapper.swift in Sources */,
 				080EDF0E21B6DCB600813479 /* FeedLoader.swift in Sources */,
@@ -881,6 +888,7 @@
 				D69396612DD74C1D00B4A76E /* ManageCache.swift in Sources */,
 				D67E14102DD44075004A60D6 /* LocalFeedLoader.swift in Sources */,
 				D60FC9092DCC7F5200F27311 /* HTTPClient.swift in Sources */,
+				D6F32B012DE6BA8100B07961 /* FeedImageDataStore.swift in Sources */,
 				D6AB309B2DE58A820093C428 /* FeedPresenter.swift in Sources */,
 				080EDF0C21B6DAE800813479 /* FeedImage.swift in Sources */,
 				D6F32AF92DE630BF00B07961 /* HTTPURLResponse+StatusCode.swift in Sources */,
