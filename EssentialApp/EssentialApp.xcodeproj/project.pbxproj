@@ -143,16 +143,16 @@
 		D60C5A7B2DE7417B0031E4EC /* EssentialApp */ = {
 			isa = PBXGroup;
 			children = (
-				D60C5A712DE7417B0031E4EC /* AppDelegate.swift */,
-				D60C5A722DE7417B0031E4EC /* Assets.xcassets */,
-				D60C5A732DE7417B0031E4EC /* FeedImageDataLoaderWithFallvackComposite.swift */,
-				D60C5A742DE7417B0031E4EC /* FeedLoaderWithFallbackComposite.swift */,
 				D60C5A752DE7417B0031E4EC /* Info.plist */,
+				D60C5A712DE7417B0031E4EC /* AppDelegate.swift */,
+				D648174C2DE7655700D7AED7 /* FeedImageDataLoaderCacheDecorator.swift */,
+				D60C5A732DE7417B0031E4EC /* FeedImageDataLoaderWithFallvackComposite.swift */,
+				D64817422DE758F100D7AED7 /* FeedLoaderCacheDecorator.swift */,
+				D60C5A742DE7417B0031E4EC /* FeedLoaderWithFallbackComposite.swift */,
+				D60C5A7A2DE7417B0031E4EC /* SceneDelegate.swift */,
+				D60C5A722DE7417B0031E4EC /* Assets.xcassets */,
 				D60C5A772DE7417B0031E4EC /* LaunchScreen.storyboard */,
 				D60C5A792DE7417B0031E4EC /* Main.storyboard */,
-				D60C5A7A2DE7417B0031E4EC /* SceneDelegate.swift */,
-				D64817422DE758F100D7AED7 /* FeedLoaderCacheDecorator.swift */,
-				D648174C2DE7655700D7AED7 /* FeedImageDataLoaderCacheDecorator.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
