@@ -34,6 +34,7 @@
 		D64817792DE802F900D7AED7 /* EssentialAppUIAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64817782DE802F900D7AED7 /* EssentialAppUIAcceptanceTests.swift */; };
 		D66C08DA2DE804DD00848142 /* EssentialAppUIAcceptanceTests.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = D66C08D92DE804DD00848142 /* EssentialAppUIAcceptanceTests.xctestplan */; };
 		D66C08DC2DE80BFC00848142 /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08DB2DE80BFC00848142 /* DebuggingSceneDelegate.swift */; };
+		D66C08DE2DE816E100848142 /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08DD2DE816E100848142 /* SceneDelegateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		D64817782DE802F900D7AED7 /* EssentialAppUIAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTests.swift; sourceTree = "<group>"; };
 		D66C08D92DE804DD00848142 /* EssentialAppUIAcceptanceTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialAppUIAcceptanceTests.xctestplan; sourceTree = "<group>"; };
 		D66C08DB2DE80BFC00848142 /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
+		D66C08DD2DE816E100848142 /* SceneDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTests.swift; sourceTree = "<group>"; };
 		D69E91142DE71E730040B911 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69E912A2DE71E740040B911 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 				D60C5A6B2DE741750031E4EC /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
 				D648173A2DE74FD600D7AED7 /* FeedLoaderCacheDecoratorTests.swift */,
 				D60C5A6C2DE741750031E4EC /* FeedLoaderWithFallbackCompositeTests.swift */,
+				D66C08DD2DE816E100848142 /* SceneDelegateTests.swift */,
 				D60C5A842DE7417E0031E4EC /* Helpers */,
 			);
 			path = EssentialAppTests;
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60C5A882DE742010031E4EC /* SharedTestHelpers.swift in Sources */,
+				D66C08DE2DE816E100848142 /* SceneDelegateTests.swift in Sources */,
 				D64817452DE75B8D00D7AED7 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */,
 				D648173F2DE7532500D7AED7 /* XCTestCase+FeedLoader.swift in Sources */,
 				D64817492DE7603D00D7AED7 /* XCTestCase+FeedImageDataLoader.swift in Sources */,
