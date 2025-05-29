@@ -51,6 +51,7 @@
 		D66C08FC2DE81C8E00848142 /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08F22DE81C8E00848142 /* UIButton+TestHelpers.swift */; };
 		D66C08FD2DE81C8E00848142 /* FeedViewControllerTests+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08F02DE81C8E00848142 /* FeedViewControllerTests+LoaderSpy.swift */; };
 		D66C08FE2DE81C8E00848142 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08F42DE81C8E00848142 /* UIImage+TestHelpers.swift */; };
+		D66C09002DE81D1700848142 /* FeedAccentanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08FF2DE81D1700848142 /* FeedAccentanceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		D66C08F32DE81C8E00848142 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		D66C08F42DE81C8E00848142 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		D66C08F52DE81C8E00848142 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		D66C08FF2DE81D1700848142 /* FeedAccentanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAccentanceTests.swift; sourceTree = "<group>"; };
 		D69E91142DE71E730040B911 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69E912A2DE71E740040B911 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 		D60C5A6D2DE741750031E4EC /* EssentialAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				D66C08FF2DE81D1700848142 /* FeedAccentanceTests.swift */,
 				D64817442DE75B8D00D7AED7 /* FeedImageDataLoaderCacheDecoratorTests.swift */,
 				D60C5A6B2DE741750031E4EC /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
 				D648173A2DE74FD600D7AED7 /* FeedLoaderCacheDecoratorTests.swift */,
@@ -436,6 +439,7 @@
 				D66C08DE2DE816E100848142 /* SceneDelegateTests.swift in Sources */,
 				D64817452DE75B8D00D7AED7 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */,
 				D648173F2DE7532500D7AED7 /* XCTestCase+FeedLoader.swift in Sources */,
+				D66C09002DE81D1700848142 /* FeedAccentanceTests.swift in Sources */,
 				D66C08EC2DE81C5F00848142 /* FeedUIIntegrationTests.swift in Sources */,
 				D64817492DE7603D00D7AED7 /* XCTestCase+FeedImageDataLoader.swift in Sources */,
 				D648173B2DE74FD600D7AED7 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
