@@ -49,6 +49,7 @@
 		D66C08FD2DE81C8E00848142 /* FeedViewControllerTests+LoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08F02DE81C8E00848142 /* FeedViewControllerTests+LoaderSpy.swift */; };
 		D66C08FE2DE81C8E00848142 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08F42DE81C8E00848142 /* UIImage+TestHelpers.swift */; };
 		D66C09002DE81D1700848142 /* FeedAccentanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C08FF2DE81D1700848142 /* FeedAccentanceTests.swift */; };
+		D66C09022DE8465B00848142 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C09012DE8465B00848142 /* HTTPClientStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		D66C08F42DE81C8E00848142 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		D66C08F52DE81C8E00848142 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		D66C08FF2DE81D1700848142 /* FeedAccentanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAccentanceTests.swift; sourceTree = "<group>"; };
+		D66C09012DE8465B00848142 /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
 		D69E91142DE71E730040B911 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69E912A2DE71E740040B911 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -190,6 +192,7 @@
 				D66C08EF2DE81C8E00848142 /* FeedViewControllerTests+Assertions.swift */,
 				D66C08F02DE81C8E00848142 /* FeedViewControllerTests+LoaderSpy.swift */,
 				D66C08F12DE81C8E00848142 /* FeedViewControllerTests+Localization.swift */,
+				D66C09012DE8465B00848142 /* HTTPClientStub.swift */,
 				D60C5A872DE742010031E4EC /* SharedTestHelpers.swift */,
 				D66C08F22DE81C8E00848142 /* UIButton+TestHelpers.swift */,
 				D66C08F32DE81C8E00848142 /* UIControl+TestHelpers.swift */,
@@ -374,6 +377,7 @@
 				D60C5A862DE7418B0031E4EC /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				D66C08F62DE81C8E00848142 /* UIControl+TestHelpers.swift in Sources */,
 				D66C08F72DE81C8E00848142 /* UIRefreshControl+TestHelpers.swift in Sources */,
+				D66C09022DE8465B00848142 /* HTTPClientStub.swift in Sources */,
 				D66C08F82DE81C8E00848142 /* FeedViewController+TestHelpers.swift in Sources */,
 				D66C08F92DE81C8E00848142 /* FeedViewControllerTests+Localization.swift in Sources */,
 				D66C08FA2DE81C8E00848142 /* FeedViewControllerTests+Assertions.swift in Sources */,
