@@ -15,8 +15,6 @@ class FeedAccentanceTests: XCTestCase {
     func test_onLaunch_displayRemoteFeedWhenCustomerHasConnectivity() {
         let feed = launch(httpClient: .online(response), store: .empty)
         
-        feed.simulateAppearance()
-        
         XCTAssertEqual(feed.numberOfRenderFeedImageView(), 2)
         XCTAssertEqual(feed.renderedFeedImageData(at: 0), makeImageData())
         XCTAssertEqual(feed.renderedFeedImageData(at: 1), makeImageData())
@@ -25,13 +23,11 @@ class FeedAccentanceTests: XCTestCase {
     func test_onLaunch_displayCacheRemoteFeedWhenCustomerHasnNoConnectivity() {
         let sharedStore = InMemoryFeedStore.empty
         let onlineFeed = launch(httpClient: .online(response), store: sharedStore)
-        onlineFeed.simulateAppearance()
         
         onlineFeed.simulateFeedImageViewVisible(at: 0)
         onlineFeed.simulateFeedImageViewVisible(at: 1)
         
         let offlineFeed = launch(httpClient: .offline, store: sharedStore)
-        offlineFeed.simulateAppearance()
         
         XCTAssertEqual(offlineFeed.numberOfRenderFeedImageView(), 2)
         XCTAssertEqual(offlineFeed.renderedFeedImageData(at: 0), makeImageData())
@@ -40,7 +36,6 @@ class FeedAccentanceTests: XCTestCase {
     
     func test_onLaunch_displaysEmptyFeedWhenCustomerHasNoConnectivityAndNoCache() {
         let feed = launch(httpClient: .offline, store: .empty)
-        feed.simulateAppearance()
         
         XCTAssertEqual(feed.numberOfRenderFeedImageView(), 0)
     }
@@ -72,7 +67,9 @@ class FeedAccentanceTests: XCTestCase {
         sut.configureWindow()
         
         let nav = sut.window?.rootViewController as? UINavigationController
-        return nav?.topViewController as! FeedViewController
+        let vc = nav?.topViewController as! FeedViewController
+        vc.simulateAppearance()
+        return vc
     }
 
     private func enterBackground(with store: InMemoryFeedStore) {
