@@ -9,12 +9,32 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:EssentialApp.xcodeproj",
+          "identifier" : "D69E91132DE71E730040B911",
+          "name" : "EssentialApp"
+        },
+        {
+          "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
+          "identifier" : "080EDEF021B6DA7E00813479",
+          "name" : "EssentialFeed"
+        },
+        {
+          "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
+          "identifier" : "D637258A2DDCD09500EC3FE5",
+          "name" : "EssentialFeediOS"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:EssentialApp.xcodeproj",
       "identifier" : "D69E91132DE71E730040B911",
       "name" : "EssentialApp"
     },
-    "testExecutionOrdering" : "random"
+    "testExecutionOrdering" : "random",
+    "threadSanitizerEnabled" : true
   },
   "testTargets" : [
     {
@@ -23,15 +43,6 @@
         "containerPath" : "container:EssentialApp.xcodeproj",
         "identifier" : "D69E91292DE71E740040B911",
         "name" : "EssentialAppTests"
-      }
-    },
-    {
-      "enabled" : false,
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:EssentialApp.xcodeproj",
-        "identifier" : "D69E91332DE71E740040B911",
-        "name" : "EssentialAppUITests"
       }
     }
   ],
