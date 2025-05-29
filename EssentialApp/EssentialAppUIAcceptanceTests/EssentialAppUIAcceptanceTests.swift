@@ -24,7 +24,6 @@ class EssentialAppUIAcceptanceTests: XCTestCase {
     func test_onLaunch_displayCacheRemoteFeedWhenCustomerHasnNoConnectivity() {
         let onlineApp = XCUIApplication()
         onlineApp.launchArguments = ["-reset"]
-        
         onlineApp.launch()
         
         let offlineApp = XCUIApplication()
