@@ -33,6 +33,7 @@
 		D61CB6882DD736EB001B482E /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D61CB6862DD736EB001B482E /* FeedStore.xcdatamodeld */; };
 		D63725942DDCD09500EC3FE5 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D637258B2DDCD09500EC3FE5 /* EssentialFeediOS.framework */; };
 		D638B4072DE8BA4E00563E38 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638B4062DE8BA4E00563E38 /* UIViewController+Snapshot.swift */; };
+		D638B4092DE8BA9900563E38 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638B4082DE8BA9900563E38 /* XCTestCase+Snapshot.swift */; };
 		D64817412DE7584C00D7AED7 /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64817402DE7584C00D7AED7 /* FeedCache.swift */; };
 		D648174B2DE764CF00D7AED7 /* FeedImageDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648174A2DE764CF00D7AED7 /* FeedImageDataCache.swift */; };
 		D6490F832DE012EB00738B9B /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6490F822DE012EB00738B9B /* Feed.storyboard */; };
@@ -177,6 +178,7 @@
 		D637258B2DDCD09500EC3FE5 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63725932DDCD09500EC3FE5 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D638B4062DE8BA4E00563E38 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
+		D638B4082DE8BA9900563E38 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		D648171E2DE7494600D7AED7 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = SOURCE_ROOT; };
 		D64817402DE7584C00D7AED7 /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 		D648174A2DE764CF00D7AED7 /* FeedImageDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataCache.swift; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 			children = (
 				D683CA552DE878AF00EBE985 /* UIImage+TestHelpers.swift */,
 				D638B4062DE8BA4E00563E38 /* UIViewController+Snapshot.swift */,
+				D638B4082DE8BA9900563E38 /* XCTestCase+Snapshot.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -941,6 +944,7 @@
 			files = (
 				D6F76F962DDCDD5800D05348 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				D683CA532DE873F400EBE985 /* FeedSnapShotTests.swift in Sources */,
+				D638B4092DE8BA9900563E38 /* XCTestCase+Snapshot.swift in Sources */,
 				D638B4072DE8BA4E00563E38 /* UIViewController+Snapshot.swift in Sources */,
 				D683CA562DE878AF00EBE985 /* UIImage+TestHelpers.swift in Sources */,
 			);
