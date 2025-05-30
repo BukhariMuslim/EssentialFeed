@@ -1,5 +1,6 @@
 # Essential App Case Study
 
+![](https://github.com/BukhariMuslim/EssentialFeed/workflows/CI-iOS/badge.svg)
 ![](https://github.com/BukhariMuslim/EssentialFeed/workflows/CI-macOS/badge.svg)
 
 ## Image Feed Feature Specs
