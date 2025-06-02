@@ -37,7 +37,7 @@ class FeedItemsMapperTest: XCTestCase {
         XCTAssertEqual(result, [])
     }
     
-    func test_load_deliverNoItemsOn200HTTPResponseWithJSONItems() throws {
+    func test_map_deliverNoItemsOn200HTTPResponseWithJSONItems() throws {
         let item1 = makeItem(
             id: UUID(),
             description: nil,
@@ -73,15 +73,4 @@ class FeedItemsMapperTest: XCTestCase {
         return (item, json)
     }
     
-    private func makeItemsJSON(_ items: [[String: Any]]) -> Data {
-        let json = ["items": items]
-        return try! JSONSerialization.data(withJSONObject: json)
-    }
-    
-}
-
-private extension HTTPURLResponse {
-    convenience init(statusCode: Int) {
-        self.init(url: anyURL(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
-    }
 }
