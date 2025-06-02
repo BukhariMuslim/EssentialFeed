@@ -347,11 +347,11 @@
 		080EDEFE21B6DA7E00813479 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				D638B41E2DED855800563E38 /* Image Comments API */,
 				D60FC9122DCDACC400F27311 /* Feed API */,
 				D67E14062DD19069004A60D6 /* Feed Cache */,
 				D6AB30902DE5735C0093C428 /* Feed Presentation */,
 				D60FC9152DCDDF9300F27311 /* Helpers */,
+				D638B41E2DED855800563E38 /* Image Comments API */,
 				D638B4192DED846700563E38 /* Shared API */,
 				D638B41B2DED84BE00563E38 /* Shared API Infra */,
 				080EDF0121B6DA7E00813479 /* Info.plist */,
