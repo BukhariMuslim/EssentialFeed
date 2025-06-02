@@ -33,8 +33,7 @@
       "identifier" : "D69E91132DE71E730040B911",
       "name" : "EssentialApp"
     },
-    "testExecutionOrdering" : "random",
-    "threadSanitizerEnabled" : true
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
