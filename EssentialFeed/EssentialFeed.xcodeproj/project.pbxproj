@@ -39,6 +39,8 @@
 		D638B40F2DED5F8400563E38 /* ImageCommentsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638B40E2DED5F8400563E38 /* ImageCommentsMapperTests.swift */; };
 		D638B4132DED609800563E38 /* ImageCommentsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638B4122DED609800563E38 /* ImageCommentsMapper.swift */; };
 		D638B4162DED695300563E38 /* ImageComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638B4152DED695300563E38 /* ImageComment.swift */; };
+		D639220A2DF003CC00E11894 /* Shared.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D63922092DF003CC00E11894 /* Shared.xcstrings */; };
+		D639220C2DF0048900E11894 /* SharedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D639220B2DF0048900E11894 /* SharedLocalizationTests.swift */; };
 		D64817412DE7584C00D7AED7 /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64817402DE7584C00D7AED7 /* FeedCache.swift */; };
 		D648174B2DE764CF00D7AED7 /* FeedImageDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648174A2DE764CF00D7AED7 /* FeedImageDataCache.swift */; };
 		D6490F832DE012EB00738B9B /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6490F822DE012EB00738B9B /* Feed.storyboard */; };
@@ -185,6 +187,8 @@
 		D638B40E2DED5F8400563E38 /* ImageCommentsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapperTests.swift; sourceTree = "<group>"; };
 		D638B4122DED609800563E38 /* ImageCommentsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapper.swift; sourceTree = "<group>"; };
 		D638B4152DED695300563E38 /* ImageComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComment.swift; sourceTree = "<group>"; };
+		D63922092DF003CC00E11894 /* Shared.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shared.xcstrings; sourceTree = "<group>"; };
+		D639220B2DF0048900E11894 /* SharedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTests.swift; sourceTree = "<group>"; };
 		D648171E2DE7494600D7AED7 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = SOURCE_ROOT; };
 		D64817402DE7584C00D7AED7 /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 		D648174A2DE764CF00D7AED7 /* FeedImageDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataCache.swift; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				D63314842DEFFCAE00EE115C /* LoadResourcePresenter.swift */,
+				D63922092DF003CC00E11894 /* Shared.xcstrings */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				D61E03792DEFF89100061C6D /* LoadResourcePresenterTests.swift */,
+				D639220B2DF0048900E11894 /* SharedLocalizationTests.swift */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
@@ -865,6 +871,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D639220A2DF003CC00E11894 /* Shared.xcstrings in Resources */,
 				D6AB309C2DE58B100093C428 /* Feed.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -967,6 +974,7 @@
 				D6F32B052DE6D4E300B07961 /* FeedImageDataStoreSpy.swift in Sources */,
 				D6C69F432DD451AC00A96B13 /* FeedStoreSpy.swift in Sources */,
 				D61CB66B2DD46A90001B482E /* SharedTestHelpers.swift in Sources */,
+				D639220C2DF0048900E11894 /* SharedLocalizationTests.swift in Sources */,
 				D67E14092DD1908F004A60D6 /* CacheFeedUseCaseTest.swift in Sources */,
 				D6F32B092DE6D9AF00B07961 /* CoreDataFeedImageDataStoreTests.swift in Sources */,
 				D61CB67C2DD71E2A001B482E /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */,
