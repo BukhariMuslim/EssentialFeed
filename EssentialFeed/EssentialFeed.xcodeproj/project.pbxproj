@@ -508,8 +508,8 @@
 		D63922192DF0285600E11894 /* Image Comments Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D639221A2DF0286F00E11894 /* ImageCommentsPresentaterTests.swift */,
 				D63922212DF02B1100E11894 /* ImageCommentsLocalizationTests.swift */,
+				D639221A2DF0286F00E11894 /* ImageCommentsPresentaterTests.swift */,
 			);
 			path = "Image Comments Presentation";
 			sourceTree = "<group>";
