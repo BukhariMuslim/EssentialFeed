@@ -52,18 +52,6 @@ class CommentsUIIntegrationTests: FeedUIIntegrationTests {
         XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading completes with error")
     }
     
-    override func test_loadFeedCompletion_dispatchesFromBackgroundToMainThread() throws {
-        let (sut, loader) = try makeSUT()
-        sut.simulateAppearance()
-        
-        let exp = expectation(description: "Wait for background queue")
-        DispatchQueue.global().async {
-            loader.completeCommentsLoading(at: 0)
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 1.0)
-    }
-    
     func test_loadCommentsCompletion_rendersSuccessfullyLoadedComments() throws {
         let comment0 = makeComment(message: "a message", username: "a username")
         let comment1 = makeComment(message: "another message", username: "another username")
@@ -104,6 +92,18 @@ class CommentsUIIntegrationTests: FeedUIIntegrationTests {
         sut.simulateUserInitiatedReload()
         loader.completeCommentsLoadingWithError(at: 1)
         assertThat(sut, isRendering: [comment])
+    }
+    
+    func test_loadCommentsCompletion_dispatchesFromBackgroundToMainThread() throws {
+        let (sut, loader) = try makeSUT()
+        sut.simulateAppearance()
+        
+        let exp = expectation(description: "Wait for background queue")
+        DispatchQueue.global().async {
+            loader.completeCommentsLoading(at: 0)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1.0)
     }
     
     override func test_loadFeedCompletion_rendersErrorMessageOnErrorUntilNextReload() throws {
