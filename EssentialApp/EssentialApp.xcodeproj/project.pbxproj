@@ -125,11 +125,11 @@
 		D60C5A6D2DE741750031E4EC /* EssentialAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				D656C3742DF3174A00DFDE0D /* CommentsUIIntegrationTests.swift */,
 				D66C08FF2DE81D1700848142 /* FeedAccentanceTests.swift */,
 				D66C08EB2DE81C5F00848142 /* FeedUIIntegrationTests.swift */,
 				D66C08DD2DE816E100848142 /* SceneDelegateTests.swift */,
 				D60C5A842DE7417E0031E4EC /* Helpers */,
-				D656C3742DF3174A00DFDE0D /* CommentsUIIntegrationTests.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
