@@ -77,6 +77,8 @@
 		D656C3692DF2C58D00DFDE0D /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = D656C3682DF2C58D00DFDE0D /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png */; };
 		D656C36B2DF2C5DF00DFDE0D /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = D656C36A2DF2C5DF00DFDE0D /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png */; };
 		D656C36D2DF2C9A200DFDE0D /* UIView+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656C36C2DF2C9A200DFDE0D /* UIView+Container.swift */; };
+		D656C3702DF2D86B00DFDE0D /* FEED_WITH_FAILED_IMAGE_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = D656C36F2DF2D86B00DFDE0D /* FEED_WITH_FAILED_IMAGE_light_extraExtraExtraLarge.png */; };
+		D656C3712DF2D86B00DFDE0D /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = D656C36E2DF2D86B00DFDE0D /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png */; };
 		D65F582C2DD75A7900E31742 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FC9162DCDDFD300F27311 /* XCTestCase+MemoryLeakTracking.swift */; };
 		D65F582D2DD83C7C00E31742 /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CB6682DD469F8001B482E /* FeedCacheTestHelpers.swift */; };
 		D65F582E2DD83DF900E31742 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CB66A2DD46A90001B482E /* SharedTestHelpers.swift */; };
@@ -253,6 +255,8 @@
 		D656C3682DF2C58D00DFDE0D /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
 		D656C36A2DF2C5DF00DFDE0D /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
 		D656C36C2DF2C9A200DFDE0D /* UIView+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Container.swift"; sourceTree = "<group>"; };
+		D656C36E2DF2D86B00DFDE0D /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_CONTENT_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
+		D656C36F2DF2D86B00DFDE0D /* FEED_WITH_FAILED_IMAGE_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_FAILED_IMAGE_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
 		D67E14082DD1908F004A60D6 /* CacheFeedUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTest.swift; sourceTree = "<group>"; };
 		D67E140F2DD44075004A60D6 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		D67E14112DD44101004A60D6 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
@@ -566,6 +570,8 @@
 			children = (
 				D656C33E2DF2A15B00DFDE0D /* FEED_WITH_CONTENT_dark.png */,
 				D656C33F2DF2A15B00DFDE0D /* FEED_WITH_CONTENT_light.png */,
+				D656C36E2DF2D86B00DFDE0D /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png */,
+				D656C36F2DF2D86B00DFDE0D /* FEED_WITH_FAILED_IMAGE_light_extraExtraExtraLarge.png */,
 				D656C3422DF2A15B00DFDE0D /* FEED_WITH_FAILED_IMAGE_LOADING_dark.png */,
 				D656C3432DF2A15B00DFDE0D /* FEED_WITH_FAILED_IMAGE_LOADING_light.png */,
 			);
@@ -1116,6 +1122,8 @@
 				D656C3492DF2A15B00DFDE0D /* FEED_WITH_CONTENT_light.png in Resources */,
 				D656C34A2DF2A15B00DFDE0D /* EMPTY_LIST_dark.png in Resources */,
 				D656C36B2DF2C5DF00DFDE0D /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png in Resources */,
+				D656C3702DF2D86B00DFDE0D /* FEED_WITH_FAILED_IMAGE_light_extraExtraExtraLarge.png in Resources */,
+				D656C3712DF2D86B00DFDE0D /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png in Resources */,
 				D656C34B2DF2A15B00DFDE0D /* FEED_WITH_FAILED_IMAGE_LOADING_light.png in Resources */,
 				D656C3692DF2C58D00DFDE0D /* LIST_WITH_ERROR_MESSAGE_light_extraExtraExtraLarge.png in Resources */,
 			);
