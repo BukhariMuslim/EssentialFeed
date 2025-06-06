@@ -1,5 +1,5 @@
 //
-//  FeedViewController+TestHelpers.swift
+//  ListViewController+TestHelpers.swift
 //  EssentialFeediOSTests
 //
 //  Created by Bukhari Muslim on 22/05/25.
@@ -8,7 +8,13 @@
 import UIKit
 import EssentialFeediOS
 
-extension FeedViewController {
+extension ListViewController {
+    public override func loadViewIfNeeded() {
+        super.loadViewIfNeeded()
+        
+        tableView.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+    }
+    
     func simulateUserInitiatedReload() {
         refreshControl?.simulatePullToRefresh()
     }
@@ -19,11 +25,22 @@ extension FeedViewController {
     }
     
     @discardableResult
+    func simulateFeedImageBecomingVisibleAgain(at row: Int) -> FeedImageCell? {
+        let view = simulateFeedImageViewNotVisible(at: row)
+        
+        let delegate = tableView.delegate
+        let index = IndexPath(row: row, section: feedImagesSection)
+        delegate?.tableView?(tableView, willDisplay: view!, forRowAt: index)
+        
+        return view
+    }
+    
+    @discardableResult
     func simulateFeedImageViewNotVisible(at row: Int) ->FeedImageCell? {
         let view = simulateFeedImageViewVisible(at: row)
         
         let delegate = tableView.delegate
-        let index = IndexPath(row: row, section: feedImageSection)
+        let index = IndexPath(row: row, section: feedImagesSection)
         delegate?.tableView?(tableView, didEndDisplaying: view!, forRowAt: index)
         
         return view
@@ -31,7 +48,7 @@ extension FeedViewController {
     
     func simulateFeedImageViewNearVisible(at row: Int) {
         let ds = tableView.prefetchDataSource
-        let index = IndexPath(row: row, section: feedImageSection)
+        let index = IndexPath(row: row, section: feedImagesSection)
         ds?.tableView(tableView, prefetchRowsAt: [index])
     }
     
@@ -39,7 +56,7 @@ extension FeedViewController {
         simulateFeedImageViewVisible(at: row)
         
         let ds = tableView.prefetchDataSource
-        let index = IndexPath(row: row, section: feedImageSection)
+        let index = IndexPath(row: row, section: feedImagesSection)
         ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
     }
     
@@ -47,28 +64,32 @@ extension FeedViewController {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
     
+    func simulateErrorViewTap() {
+        errorView.simulateTap()
+    }
+    
     var errorMessage: String? {
-        return errorView?.message
+        return errorView.message
     }
     
     var isShowingLoadingIndicator: Bool {
         return refreshControl?.isRefreshing == true
     }
     
-    func numberOfRenderFeedImageView() -> Int {
-        return tableView.numberOfRows(inSection: feedImageSection)
+    func numberOfRenderedFeedImageView() -> Int {
+        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
     }
     
     func feedImageView(at row: Int) -> UITableViewCell? {
-        guard numberOfRenderFeedImageView() > row else {
+        guard numberOfRenderedFeedImageView() > row else {
             return nil
         }
         let ds = tableView.dataSource
-        let index = IndexPath(row: row, section: feedImageSection)
+        let index = IndexPath(row: row, section: feedImagesSection)
         return ds?.tableView(tableView, cellForRowAt: index)
     }
     
-    private var feedImageSection: Int {
+    private var feedImagesSection: Int {
         return 0
     }
     

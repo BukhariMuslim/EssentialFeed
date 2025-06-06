@@ -46,7 +46,7 @@ extension FeedUIIntegrationTests {
         
         private var imageRequests = [(url: URL, completion: (FeedImageDataLoader.Result) -> Void)]()
         
-        var loadedImageURls: [URL] {
+        var loadedImageURLs: [URL] {
             return imageRequests.map(\.url)
         }
         private(set) var cancelledImageURls = [URL]()
