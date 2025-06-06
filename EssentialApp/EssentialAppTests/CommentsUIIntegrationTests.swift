@@ -13,12 +13,12 @@ import EssentialFeediOS
 
 class CommentsUIIntegrationTests: FeedUIIntegrationTests {
     
-    override func test_feedView_hasTitle() throws {
+    func test_commentsView_hasTitle() throws {
         let (sut, _) = try makeSUT()
         
         sut.simulateAppearance()
         
-        XCTAssertEqual(sut.title, feedTitle)
+        XCTAssertEqual(sut.title, commentsTitle)
     }
     
     override func test_loadFeedActions_requestFeedFromLoader() throws {
