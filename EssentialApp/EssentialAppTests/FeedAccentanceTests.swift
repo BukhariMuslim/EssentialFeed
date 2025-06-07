@@ -137,7 +137,7 @@ class FeedAccentanceTests: XCTestCase {
                 "author": [
                     "username": "a username"
                 ]
-            ],
+            ]
         ]])
     }
     
