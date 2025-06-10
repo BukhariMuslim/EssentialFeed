@@ -162,7 +162,7 @@ class FeedAccentanceTests: XCTestCase {
     }
     
     private func makeLastEmptyFeedPageData() -> Data {
-        return try! JSONSerialization.data(withJSONObject: ["items": []])
+        try! JSONSerialization.data(withJSONObject: ["items": [[String: Any]]()])
     }
     
     private func makeCommentsData() -> Data {
@@ -174,7 +174,7 @@ class FeedAccentanceTests: XCTestCase {
                 "author": [
                     "username": "a username"
                 ]
-            ]
+            ] as [String: Any]
         ]])
     }
     
