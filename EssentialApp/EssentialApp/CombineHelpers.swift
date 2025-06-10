@@ -176,12 +176,12 @@ typealias AnyDispatchQueueScheduler = AnyScheduler<DispatchQueue.SchedulerTimeTy
 
 extension AnyDispatchQueueScheduler {
     static var immediateOnMainQueue: Self {
-        DispatchQueue.immediateWhenOnMainQueueScheduler.eraseToAnyPublisher()
+        DispatchQueue.immediateWhenOnMainQueueScheduler.eraseToAnyScheduler()
     }
 }
 
 extension Scheduler {
-    func eraseToAnyPublisher() -> AnyScheduler<SchedulerTimeType, SchedulerOptions> {
+    func eraseToAnyScheduler() -> AnyScheduler<SchedulerTimeType, SchedulerOptions> {
         AnyScheduler(self)
     }
 }
@@ -213,7 +213,7 @@ struct AnyScheduler<SchedulerTimeType: Strideable, SchedulerOptions>: Scheduler 
         _scheduleAfter(date, tolerance, options, action)
     }
     
-    func schedule(after date: SchedulerTimeType, interval: SchedulerTimeType.Stride, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?, _ action: @escaping () -> Void) -> any Cancellable {
+    func schedule(after date: SchedulerTimeType, interval: SchedulerTimeType.Stride, tolerance: SchedulerTimeType.Stride, options: SchedulerOptions?, _ action: @escaping () -> Void) -> Cancellable {
         _scheduleAfterInterval(date, interval, tolerance, options, action)
     }
 }
