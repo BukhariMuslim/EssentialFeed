@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         label: "com.bmapp.EssentialApp.infra.queue",
         qos: .userInitiated,
         attributes: .concurrent
-    ).eraseToAnyPublisher()
+    ).eraseToAnyScheduler()
     
     private lazy var httpClient: HTTPClient = {
         URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
