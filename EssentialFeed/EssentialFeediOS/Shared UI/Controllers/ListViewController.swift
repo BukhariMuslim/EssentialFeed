@@ -11,7 +11,7 @@ import EssentialFeed
 public final class ListViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, ResourceErrorView {
     private(set) public var errorView = ErrorView()
     
-    private var onViewIsAppearing: ((ListViewController) -> Void)?
+    private var onViewDidAppear: ((ListViewController) -> Void)?
     
     private lazy var dataSource: UITableViewDiffableDataSource<Int, CellController> = {
         .init(tableView: tableView) { (tableView, index, controller) in
@@ -25,8 +25,8 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         super.viewDidLoad()
         
         configureTable()
-        onViewIsAppearing = { vc in
-            vc.onViewIsAppearing = nil
+        onViewDidAppear = { vc in
+            vc.onViewDidAppear = nil
             vc.refresh()
         }
     }
@@ -59,10 +59,10 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         onRefresh?()
     }
     
-    public override func viewIsAppearing(_ animated: Bool) {
-        super.viewIsAppearing(animated)
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        onViewIsAppearing?(self)
+        onViewDidAppear?(self)
     }
     
     public func display(_ sections: [CellController]...) {
