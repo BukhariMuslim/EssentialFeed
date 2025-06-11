@@ -69,10 +69,6 @@ class LoadFeedImageDataFromCacheUseCaseTests: XCTestCase {
         return .failure(LocalFeedImageDataLoader.LoadError.notFound)
     }
     
-    private func never(file: StaticString = #filePath, line: UInt = #line) {
-        XCTFail("Expected no no invocations", file: file, line: line)
-    }
-    
     private func expect(_ sut: LocalFeedImageDataLoader, toCompleteWith expectedResult: Result<Data, Error>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         action()
         
