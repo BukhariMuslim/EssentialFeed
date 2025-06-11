@@ -85,7 +85,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
-        localFeedLoader.validateCache { _ in}
+        do {
+            try localFeedLoader.validateCache()
+        } catch {
+            logger.error("Failed to validate cache with error \(error.localizedDescription)")
+        }
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
