@@ -40,7 +40,7 @@ extension InMemoryFeedStore: FeedStore {
         feedCache = CachedFeed(feed: feed, timestamp: timestamp)
     }
     
-    func retrieve() throws -> CacheFeed? {
+    func retrieve() throws -> CachedFeed? {
         feedCache
     }
 }
