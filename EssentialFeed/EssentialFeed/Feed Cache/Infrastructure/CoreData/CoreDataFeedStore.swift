@@ -24,6 +24,10 @@ public final class CoreDataFeedStore {
         case background
     }
     
+    public var contextQueue: ContextQueue {
+        context == container.viewContext ? .main : .background
+    }
+    
     public init(storeURL: URL, contextQueue: ContextQueue = .background) throws {
         guard let model = Self.model else {
             throw StoreError.modelNotFound
