@@ -8,37 +8,16 @@
 import Foundation
 import EssentialFeed
 
-class InMemoryFeedStore: FeedStore, FeedImageDataStore {
+class InMemoryFeedStore {
     private(set) var feedCache: CachedFeed?
     private var feedImageDataCache: [URL: Data] = [:]
     
     private init(feedCache: CachedFeed? = nil) {
         self.feedCache = feedCache
     }
-    
-    func deleteCacheFeed(completion: @escaping DeletionCompletion) {
-        feedCache = nil
-        completion(.success(()))
-    }
-    
-    func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
-        feedCache = CachedFeed(feed: feed, timestamp: timestamp)
-        completion(.success(()))
-    }
-    
-    func retrieve(completion: @escaping RetrievalCompletion) {
-        completion(.success(feedCache))
-    }
-    
-    func insert(_ data: Data, for url: URL, completion: @escaping (InsertionResult) -> Void) {
-        feedImageDataCache[url] = data
-        completion(.success(()))
-    }
-    
-    func retrieve(dataForURL url: URL, completion: @escaping (RetrievalResult) -> Void) {
-        completion(.success(feedImageDataCache[url]))
-    }
-    
+}
+
+extension InMemoryFeedStore {
     static var empty: InMemoryFeedStore {
         InMemoryFeedStore()
     }
@@ -49,5 +28,29 @@ class InMemoryFeedStore: FeedStore, FeedImageDataStore {
     
     static var withNonExpiredFeedCache: InMemoryFeedStore {
         InMemoryFeedStore(feedCache: CachedFeed(feed: [], timestamp: Date()))
+    }
+}
+
+extension InMemoryFeedStore: FeedStore {
+    func deleteCachedFeed() throws {
+        feedCache = nil
+    }
+    
+    func insert(_ feed: [LocalFeedImage], timestamp: Date) throws {
+        feedCache = CachedFeed(feed: feed, timestamp: timestamp)
+    }
+    
+    func retrieve() throws -> CachedFeed? {
+        feedCache
+    }
+}
+
+extension InMemoryFeedStore: FeedImageDataStore {
+    func insert(_ data: Data, for url: URL) throws {
+        feedImageDataCache[url] = data
+    }
+    
+    func retrieve(dataForURL url: URL) throws -> Data? {
+        feedImageDataCache[url]
     }
 }

@@ -89,8 +89,8 @@ class FeedAccentanceTests: XCTestCase {
         httpClient: HTTPClientStub = .offline,
         store: InMemoryFeedStore = .empty
     ) -> ListViewController {
-        let sut = SceneDelegate(httpClient: httpClient, store: store)
-        sut.window = UIWindow(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        let sut = SceneDelegate(httpClient: httpClient, store: store, scheduler: .immediateOnMainQueue)
+        sut.window = UIWindow(frame: CGRect(x: 0, y: 0, width: 390, height: 1))
         sut.configureWindow()
         
         let nav = sut.window?.rootViewController as? UINavigationController
@@ -100,7 +100,7 @@ class FeedAccentanceTests: XCTestCase {
     }
 
     private func enterBackground(with store: InMemoryFeedStore) {
-        let sut = SceneDelegate(httpClient: HTTPClientStub.offline, store: store)
+        let sut = SceneDelegate(httpClient: HTTPClientStub.offline, store: store, scheduler: .immediateOnMainQueue)
         sut.sceneWillResignActive(UIApplication.shared.connectedScenes.first!)
     }
     
@@ -162,7 +162,7 @@ class FeedAccentanceTests: XCTestCase {
     }
     
     private func makeLastEmptyFeedPageData() -> Data {
-        return try! JSONSerialization.data(withJSONObject: ["items": []])
+        return try! JSONSerialization.data(withJSONObject: ["items": [[String: Any]]()])
     }
     
     private func makeCommentsData() -> Data {
@@ -174,7 +174,7 @@ class FeedAccentanceTests: XCTestCase {
                 "author": [
                     "username": "a username"
                 ]
-            ]
+            ] as [String: Any],
         ]])
     }
     
