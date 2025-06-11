@@ -31,7 +31,7 @@ extension CoreDataFeedStore: FeedStore {
         }
     }
     
-    public func deleteCacheFeed(completion: @escaping DeletionCompletion) {
+    public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         performAsync { context in
             completion(Result {
                 try ManagedCache.deleteCache(in: context)

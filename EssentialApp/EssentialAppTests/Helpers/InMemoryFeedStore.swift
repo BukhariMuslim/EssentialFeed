@@ -32,7 +32,7 @@ extension InMemoryFeedStore {
 }
 
 extension InMemoryFeedStore: FeedStore {
-    func deleteCacheFeed(completion: @escaping DeletionCompletion) {
+    func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         feedCache = nil
         completion(.success(()))
     }

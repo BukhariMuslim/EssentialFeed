@@ -129,7 +129,7 @@ extension FeedStoreSpecs where Self: XCTestCase {
         let exp = expectation(description: "Wait for cache deletion")
         
         var deletionError: Error?
-        sut.deleteCacheFeed { result in
+        sut.deleteCachedFeed { result in
             if case let Result.failure(error) = result { deletionError = error }
             exp.fulfill()
         }

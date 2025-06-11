@@ -11,7 +11,7 @@ import EssentialFeed
 class NullStore {}
 
 extension NullStore: FeedStore {
-    func deleteCacheFeed(completion: @escaping DeletionCompletion) {
+    func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         completion(.success(()))
     }
     
