@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0895DA82234B3B950031BB2D"
+               BlueprintIdentifier = "D69E91132DE71E730040B911"
                BuildableName = "EssentialApp.app"
                BlueprintName = "EssentialApp"
                ReferencedContainer = "container:EssentialApp.xcodeproj">
@@ -32,7 +32,7 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0895DA82234B3B950031BB2D"
+            BlueprintIdentifier = "D69E91132DE71E730040B911"
             BuildableName = "EssentialApp.app"
             BlueprintName = "EssentialApp"
             ReferencedContainer = "container:EssentialApp.xcodeproj">
@@ -44,7 +44,7 @@
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0895DA98234B3B980031BB2D"
+               BlueprintIdentifier = "D69E91292DE71E740040B911"
                BuildableName = "EssentialAppTests.xctest"
                BlueprintName = "EssentialAppTests"
                ReferencedContainer = "container:EssentialApp.xcodeproj">
@@ -66,7 +66,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0895DA82234B3B950031BB2D"
+            BlueprintIdentifier = "D69E91132DE71E730040B911"
             BuildableName = "EssentialApp.app"
             BlueprintName = "EssentialApp"
             ReferencedContainer = "container:EssentialApp.xcodeproj">
@@ -89,7 +89,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0895DA82234B3B950031BB2D"
+            BlueprintIdentifier = "D69E91132DE71E730040B911"
             BuildableName = "EssentialApp.app"
             BlueprintName = "EssentialApp"
             ReferencedContainer = "container:EssentialApp.xcodeproj">
